@@ -1,0 +1,7 @@
+dash      ==           2.8.1
+pandas      ==         1.5.3
+plotly     ==          5.13.0
+dash_bootstrap_components
+dash_mantine_components
+dash_iconify
+dash_gif_component
