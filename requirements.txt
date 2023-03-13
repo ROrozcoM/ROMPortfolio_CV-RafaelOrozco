@@ -5,3 +5,4 @@ dash_bootstrap_components
 dash_mantine_components
 dash_iconify
 dash_gif_component
+dash_player
