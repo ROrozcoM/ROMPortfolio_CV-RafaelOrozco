@@ -12,9 +12,9 @@ This tutorial assumes some knowledge of Python and web development, but we have 
 
 Let's get started!
 
-You can use my template and change it for your information
+You can use my template and change it for your information. **Create a virtual enviroment** for the project
 
-To make the deployment:
+To make the deployment, set your local directory project and:
 
 Buid your app first:
 ```
