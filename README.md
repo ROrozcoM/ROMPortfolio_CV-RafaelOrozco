@@ -10,6 +10,8 @@ We will also cover the deployment process of your portfolio to Google Cloud, all
 
 This tutorial assumes some knowledge of Python and web development, but we have provided detailed explanations and code examples to make it accessible for beginners as well. So whether you are a seasoned developer or just starting out, this tutorial will help you take your portfolio to the next level.
 
+Right now my app is running on: [rafaelorozcoapp](https://rafaelorozcomorancvitae-brn237bsoq-no.a.run.app/)
+
 Let's get started!
 
 You can use my template and change it for your information. **Create a virtual enviroment** for the project
