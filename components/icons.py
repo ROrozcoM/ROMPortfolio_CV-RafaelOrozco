@@ -38,7 +38,7 @@ twitter = dmc.Group(
                     ],
                 )
 
-instagram = dmc.Group(
+github = dmc.Group(
                     position="center",
                     align="center",
                     spacing="xl",
@@ -47,7 +47,7 @@ instagram = dmc.Group(
                             dmc.Tooltip(
                                 dmc.ThemeIcon(
                                     DashIconify(
-                                        icon="skill-icons:instagram",
+                                        icon="mdi:github",
                                         width=80,
                                     ),
                                     radius=100,
@@ -55,10 +55,10 @@ instagram = dmc.Group(
                                     variant="outline",
                                     color="gray",
                                 ),
-                                label="Follow Me!",
+                                label="See Profile",
                                 position="bottom",
                             ),
-                            href="https://www.instagram.com/rafa_orozco20/",
+                            href="https://github.com/ROrozcoM",
                         ),
 
                     ],

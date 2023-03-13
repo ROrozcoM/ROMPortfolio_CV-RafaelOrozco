@@ -5,11 +5,12 @@ import dash_html_components as html
 from dash import dcc
 from dash.dependencies import Input, Output
 from components.cards import cards
-from components.icons import twitter, instagram, linkedin
+from components.icons import twitter, github, linkedin
 from components.personal import acordion, cards_pers
-from components.experiencia import time_line
+from components.experience import time_line
 from components.skills import skills_grafico
-from components.gallery import gallery_carousel
+from components.gallery import gallery_carousel, youvideo
+from components.map import map_card
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP],
                 meta_tags=[{'name': 'viewport',
@@ -40,20 +41,20 @@ sidebar = html.Div(
         html.H2("Rafael Orozco Morán"),
         html.Hr(),
         html.P(
-            "Conoce un poco más sobre mí", className="lead"
+            "Learn more about me", className="lead"
         ),
         dbc.Nav(
             [
-                dbc.NavLink("Información General", href="/", active="exact"),
-                dbc.NavLink("Experiencia", href="/page-1-experiencia", active="exact"),
-                dbc.NavLink("Habilidades", href="/page-2-habilidades", active="exact"),
-                dbc.NavLink("Proyectos y Reconocimientos", href="/page-3-misproyectos", active="exact"),
-                dbc.NavLink("Galería", href="/page-4-gallery", active="exact"),
+                dbc.NavLink("General Information", href="/", active="exact"),
+                dbc.NavLink("Experience", href="/page-1-experience", active="exact"),
+                dbc.NavLink("Skills", href="/page-2-skills", active="exact"),
+                dbc.NavLink("Projects and Awards", href="/page-3-myprojects", active="exact"),
+                dbc.NavLink("Gallery", href="/page-4-gallery", active="exact"),
                 html.Br(),
                 html.Br(),
                 linkedin,
                 html.Br(),
-                instagram,
+                github,
                 html.Br(),
                 twitter,
 
@@ -82,7 +83,7 @@ app.layout = html.Div([
 def render_page_content(pathname):
     if pathname == "/":
         return [
-                html.H1('Información Personal',
+                html.H1('Personal Information',
                         style={'textAlign':'center'}),
                 html.Br(),
                 html.Br(),
@@ -91,35 +92,41 @@ def render_page_content(pathname):
                 cards_pers
 
                 ]
-    elif pathname == "/page-1-experiencia":
+    elif pathname == "/page-1-experience":
         return [
-                html.H1('Estudios y Experiencia profesional',
+                html.H1('Studies and Professional experience',
                         style={'textAlign':'center'}),
                 html.Br(),
                 html.Br(),
                 time_line
 
                 ]
-    elif pathname == "/page-2-habilidades":
+    elif pathname == "/page-2-skills":
         return [
-                html.H1('Habilidades destacadas',
+                html.H1('Featured skills',
                         style={'textAlign':'center'}),
                 html.Br(),
-                html.H3('Lenguajes de Programación'),
                 html.Br(),
                 skills_grafico
                 ]
-    elif pathname == "/page-3-misproyectos":
+    elif pathname == "/page-3-myprojects":
         return [
-                html.H1('Proyectos y Premios',
+                html.H1('Projects and Awards',
                         style={'textAlign':'center'}),
                 cards
                 ]
     elif pathname == "/page-4-gallery":
         return [
-                html.H1('Galería',
+                html.H1('Gallery',
                         style={'textAlign':'center'}),
-                gallery_carousel
+                youvideo,
+                html.Br(),
+                html.Br(),
+                gallery_carousel,
+                html.Br(),
+                html.Br(),
+                html.H3('Placed where I worked in', style={'textAlign':'center'}),
+                map_card
                 ]
     # If the user tries to reach a different page, return a 404 message
     return dbc.Jumbotron(
